@@ -51,4 +51,11 @@ public class UserService implements IUserService {
 
         return data;
     }
+
+    @Override
+    public boolean deleteUserById(int id) {
+        String sql = "DELETE FROM users WHERE id=" + id + ";";
+
+        return template.update(sql) == 1;
+    }
 }

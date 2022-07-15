@@ -8,4 +8,6 @@ public interface IUserService {
     void setUser(UserModel user);
 
     UserModel getUserById(int id);
+
+    boolean deleteUserById(int id);
 }
